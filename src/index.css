@@ -223,7 +223,7 @@ section h2 {
 }
 
 .product {
-  width: 260px;
+  width: 300px;
   overflow-wrap: break-word;
 }
 
@@ -237,8 +237,8 @@ section h2 {
 }
 
 .product-img {
-  width: 260px;
-  height: 260px;
+  width: 300px;
+  height: 300px;
   overflow: hidden;
   position: relative;
 }
@@ -610,7 +610,9 @@ aside {
     display: flex;
     flex-direction: column;
   }
-
+  .product {
+    padding-bottom: 2rem;
+  }
   .cart-container {
     padding-top: 0.5rem;
   }

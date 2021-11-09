@@ -9,7 +9,7 @@ const ProductDetails = () => {
     const obj = useParams()
     const id = parseInt(obj.id)
     const {state,openModal} = useGlobalContext()
-    console.log(obj)
+    
     const item = state.products.find(item=>item.id===id)
     const {image,name,price,info} = item    
 

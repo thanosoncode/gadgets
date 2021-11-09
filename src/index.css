@@ -426,7 +426,7 @@ section h2 {
   align-items: center;
   height: 64px;
   vertical-align: middle;
-  gap: 5px;
+  gap: 10px;
 }
 
 .cart-item-quantity button {
@@ -635,6 +635,7 @@ aside {
 
   aside {
     width: 280px;
+    margin-top: 3rem;
   }
   .clear-cart-btn {
     font-size: 0.9rem;
@@ -643,6 +644,6 @@ aside {
     padding-bottom: 0.5rem;
   }
   .cart-item-quantity {
-    gap: 9px;
+    gap: 11px;
   }
 }

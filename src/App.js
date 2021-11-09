@@ -11,13 +11,16 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/products">
+        <Route exact path="/">
+            <Home/>
+        </Route>
+        <Route  exact path="/products">
           <Home/>
         </Route>
         <Route path ="/products/:id"> 
           <ProductDetails/>
         </Route>
-        <Route exact path="/cart">
+        <Route  path="/cart">
           <Navbar/>
           <Cart/>
         </Route>

@@ -53,7 +53,9 @@ const reducer = (state,action) => {
         }
 
     }
-
+    if(action.type === "CHECKOUT"){
+        return {...state,checkOutDone:true,cart:[],amount:0}
+    }
     return state
     
 }

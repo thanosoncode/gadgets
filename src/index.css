@@ -109,7 +109,7 @@ section {
 
 .modal {
   position: absolute;
-  top: 40%;
+  top: 20%;
   left: 50%;
   background: white;
   transform: translate(-50%, -50%);
@@ -223,7 +223,7 @@ section h2 {
 }
 
 .product {
-  width: 220px;
+  width: 260px;
   overflow-wrap: break-word;
 }
 
@@ -237,8 +237,8 @@ section h2 {
 }
 
 .product-img {
-  width: 200px;
-  height: 200px;
+  width: 260px;
+  height: 260px;
   overflow: hidden;
   position: relative;
 }
@@ -576,6 +576,10 @@ aside {
 .sale {
   color: #21b576;
   font-weight: bolder;
+}
+
+.is-empty {
+  text-align: center;
 }
 
 @media only screen and (max-width: 900px) {

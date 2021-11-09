@@ -13,7 +13,8 @@ const initialState = {
     cart:[],
     amount:0,
     sale:false,
-    total:0
+    total:0,
+    checkoutDone:false
 }
 
 const AppContextProvider = ({children}) => {
@@ -44,8 +45,12 @@ const AppContextProvider = ({children}) => {
         dispatch({type:"DECREASE",payload:id})
     }
 
+    const checkOut = () => {
+        dispatch({type:"CHECKOUT"})
+    }
+
     return (
-        <AppContext.Provider value={{openModal,closeModal,removeItem,clearCart,increaseQuantity,decreaseQuantity,state}}>
+        <AppContext.Provider value={{openModal,closeModal,removeItem,clearCart,increaseQuantity,decreaseQuantity,checkOut,state}}>
             {children}
         </AppContext.Provider>
     )

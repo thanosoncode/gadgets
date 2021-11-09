@@ -6,7 +6,7 @@ import { useGlobalContext } from './context'
 
 const Cart = () => {
     
-    const {state,clearCart,removeItem,increaseQuantity,decreaseQuantity} = useGlobalContext()
+    const {state,clearCart,removeItem,increaseQuantity,decreaseQuantity,checkOut} = useGlobalContext()
    const [sale,setSale] = useState(false)
 
 
@@ -35,7 +35,7 @@ const Cart = () => {
 
     return (
         <div className="cart-container">
-            <h3>Your Cart</h3>
+            <h3>{state.checkOutDone ? <span>Thank you for shopping with us. <br/> Expect your items shortly!</span>: "Your Cart"}</h3>
             {state.cart.length > 0 ? <div className="cart-items-container">
                 <table>
                     <thead className="cart-head">
@@ -96,14 +96,14 @@ const Cart = () => {
                             <span>Sale</span><span className={sale ? "sale" : ""}>{sale ? "25%" : "0%" }</span>
                         </div>
                         <div className="summary-row">
-                            <span>Total</span><span>{sale ? afterSale() : beforeSale}</span>
+                            <span>Total</span><span>${sale ? afterSale() : beforeSale}.00</span>
                         </div>
-                        <button className="checkout">CheckOut</button>
+                        <button className="checkout" onClick={checkOut}>CheckOut</button>
                     </div>
                 </aside>
                 
                 
-            </div> : "...is empty"}
+            </div> : <div className="is-empty">{checkOut ? "" : "...is empty"}</div>}
             
         </div>
     )

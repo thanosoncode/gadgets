@@ -33,7 +33,7 @@ const Cart = () => {
 
   const checkSale = (e) => {
     e.preventDefault();
-    if (inputEl.current.value === "react") {
+    if (inputEl.current.value.toLowerCase().trim() === "react") {
       setSale(true);
     }
   };
@@ -76,14 +76,15 @@ const Cart = () => {
                         <FaPlus />
                       </button>
                     </td>
+
+                    <td className="cart-item-subtotal">
+                      ${item.price * item.quantity}.00
+                    </td>
                     <td
                       className="cart-item-trash"
                       onClick={() => removeItem(item.id)}
                     >
                       <FaTimes />
-                    </td>
-                    <td className="cart-item-subtotal">
-                      ${item.price * item.quantity}.00
                     </td>
                   </tr>
                 );
@@ -102,7 +103,7 @@ const Cart = () => {
                     placeholder="Enter promo code - react"
                     ref={inputEl}
                   />
-                  <button>
+                  <button type="submit">
                     <FaPlus />
                   </button>
                 </div>

@@ -611,12 +611,25 @@ aside {
     display: flex;
     flex-direction: column;
   }
+  .nav-cart span {
+    padding-left: 1rem;
+  }
   .product {
     padding-bottom: 2rem;
+    width: 350px;
   }
-
+  .product img {
+    width: 350px;
+    height: 350px;
+  }
   .product-info {
     width: 70%;
+  }
+  .product-title {
+    padding-bottom: 0.5rem;
+  }
+  .product-info h5 {
+    padding-bottom: 0;
   }
   .cart-container {
     padding-top: 0.5rem;
@@ -644,6 +657,8 @@ aside {
     padding-bottom: 0.5rem;
   }
   .cart-item-quantity {
+    display: flex;
+    justify-content: space-evenly;
     gap: 11px;
   }
 }

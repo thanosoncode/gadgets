@@ -109,7 +109,7 @@ section {
 
 .modal {
   position: absolute;
-  top: 20%;
+  top: 500px;
   left: 50%;
   background: white;
   transform: translate(-50%, -50%);
@@ -333,7 +333,7 @@ section h2 {
 
 .product-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 0.5rem;
   padding-top: 1rem;
 }

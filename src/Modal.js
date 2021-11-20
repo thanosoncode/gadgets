@@ -11,30 +11,31 @@ const Modal = () => {
 
   return (
     <>
-      <div className="modal-container"></div>
-      <div className="modal" style={{ top: `${state.modalFromTop}px` }}>
-        <div className="close-modal" onClick={closeModal}>
-          <FaTimes />
-        </div>
-        <h3>Item Successfully Added To Cart</h3>
-        <div className="modal-item">
-          <img src={data[id].image} alt="" />
-          <div className="modal-info">
-            <div>
-              <h5>{data[id].name}</h5>
-              <h5>{data[id].price}</h5>
-            </div>
-            <div className="modal-buttons">
-              <Link to="/cart">
-                <button className="modal-btn black" onClick={closeModal}>
-                  View Cart
-                </button>
-              </Link>
-              <Link to="/products">
-                <button className="modal-btn green" onClick={closeModal}>
-                  Continue Shopping
-                </button>
-              </Link>
+      <div className="modal-container">
+        <div className="modal" style={{ top: `${state.modalFromTop}px` }}>
+          <div className="close-modal" onClick={closeModal}>
+            <FaTimes />
+          </div>
+          <h3>Item Successfully Added To Cart</h3>
+          <div className="modal-item">
+            <img src={data[id].image} alt="" />
+            <div className="modal-info">
+              <div>
+                <h5>{data[id].name}</h5>
+                <h5>{data[id].price}</h5>
+              </div>
+              <div className="modal-buttons">
+                <Link to="/cart">
+                  <button className="modal-btn black" onClick={closeModal}>
+                    View Cart
+                  </button>
+                </Link>
+                <Link to="/products">
+                  <button className="modal-btn green" onClick={closeModal}>
+                    Continue Shopping
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

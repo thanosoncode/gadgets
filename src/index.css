@@ -667,4 +667,20 @@ aside {
   .cart-items-container {
     padding: 0 0.5rem;
   }
+  .modal {
+    width: 360px;
+  }
+  .modal-item {
+    flex-direction: column;
+  }
+  .modal-item img {
+    width: 200px;
+    height: 200px;
+  }
+  .modal-item-title {
+    padding-top: 1rem;
+  }
+  .modal-buttons {
+    justify-content: center;
+  }
 }

@@ -20,9 +20,9 @@ const Modal = () => {
           <div className="modal-item">
             <img src={data[id].image} alt="" />
             <div className="modal-info">
-              <div>
+              <div className="modal-item-title">
                 <h5>{data[id].name}</h5>
-                <h5>{data[id].price}</h5>
+                <h5>${data[id].price}.00</h5>
               </div>
               <div className="modal-buttons">
                 <Link to="/cart">

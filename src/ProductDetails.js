@@ -26,7 +26,6 @@ const ProductDetails = () => {
 
   return (
     <>
-      {state.detailsModal && <Modal />}
       <div className="product-details-container">
         <h1>{name}</h1>
         <div className="product-container">
@@ -65,6 +64,7 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
+        {state.detailsModal && <Modal />}
       </div>
     </>
   );

@@ -104,6 +104,9 @@ section {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal {
@@ -115,7 +118,8 @@ section {
   width: 400px;
   text-align: center;
   padding: 1rem;
-  z-index: 10;
+  /* z-index: 10; */
+  /* position: relative; */
 }
 
 .close-modal {
@@ -278,9 +282,9 @@ section h2 {
 }
 
 .product-details-container {
-  height: 100vh;
   max-width: 1100px;
   margin: 0 auto;
+  position: relative;
 }
 
 .product-details-container h1 {

@@ -618,7 +618,7 @@ aside {
     padding-bottom: 2rem;
     width: 350px;
   }
-  .product img {
+  .product-img {
     width: 350px;
     height: 350px;
   }
@@ -660,5 +660,8 @@ aside {
     display: flex;
     justify-content: space-evenly;
     gap: 11px;
+  }
+  .cart-items-container {
+    padding: 0 0.5rem;
   }
 }

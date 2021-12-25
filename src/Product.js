@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaCartPlus } from "react-icons/fa";
 import { useGlobalContext } from "./context";
@@ -8,13 +8,6 @@ const Product = ({ item }) => {
   const { id, name, image, price } = item;
   const [cartPlus, setCartPlus] = useState(false);
   const [alreadyInCart, setAlreadyInCart] = useState(false);
-  const [distance, setDistance] = useState(0);
-  const buttonRef = useRef();
-
-  useEffect(() => {
-    const buttonFromTop = buttonRef.current?.getBoundingClientRect().top;
-    setDistance(buttonFromTop);
-  }, []);
 
   const checkItem = (id) => {
     const selectedItem = state.products.find((item) => item.id === id);
@@ -37,9 +30,8 @@ const Product = ({ item }) => {
           <img src={image} alt={name} />
         </Link>
         <button
-          ref={buttonRef}
           className={cartPlus ? "cart-add-btn show" : "cart-add-btn"}
-          onClick={() => openModal(id, addedFrom, distance)}
+          onClick={() => openModal(id, addedFrom)}
         >
           {alreadyInCart ? "already in cart" : <FaCartPlus />}
         </button>

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "./context";
@@ -8,13 +8,6 @@ const ProductDetails = () => {
   const obj = useParams();
   const id = parseInt(obj.id);
   const { state, openModal } = useGlobalContext();
-  const [distance, setDistance] = useState(0);
-  const buttonRef = useRef();
-
-  useEffect(() => {
-    const buttonFromTop = buttonRef.current?.getBoundingClientRect().top;
-    setDistance(buttonFromTop);
-  }, []);
 
   const item = state.products.find((item) => item.id === id);
   const { image, name, price, info } = item;
@@ -53,11 +46,10 @@ const ProductDetails = () => {
                 Back To Products
               </Link>
               <button
-                ref={buttonRef}
                 className={
                   checkItem() ? "btn btn-green disabled" : "btn btn-green"
                 }
-                onClick={() => openModal(id, addedFrom, distance)}
+                onClick={() => openModal(id, addedFrom)}
               >
                 {checkItem() ? "Added To Cart" : "Add to Cart"}
               </button>

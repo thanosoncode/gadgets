@@ -16,14 +16,13 @@ const initialState = {
   sale: false,
   total: 0,
   checkoutDone: false,
-  modalFromTop: 0,
 };
 
 const AppContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const openModal = (id, addedFrom, buttonFromTop) => {
-    dispatch({ type: "OPEN_MODAL", payload: [id, addedFrom, buttonFromTop] });
+  const openModal = (id, addedFrom) => {
+    dispatch({ type: "OPEN_MODAL", payload: [id, addedFrom] });
   };
 
   const closeModal = () => {

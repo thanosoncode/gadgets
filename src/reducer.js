@@ -13,7 +13,6 @@ const reducer = (state, action) => {
           modalId: action.payload[0],
           cart: [...state.cart, newItem],
           amount: state.amount + 1,
-          modalFromTop: action.payload[2] - 200,
         };
       }
       if (action.payload[1] === "detailsPage") {
@@ -24,7 +23,6 @@ const reducer = (state, action) => {
           modalOpen: false,
           cart: [...state.cart, newItem],
           amount: state.amount + 1,
-          modalFromTop: action.payload[2] - 200,
         };
       }
     } else {
@@ -59,7 +57,7 @@ const reducer = (state, action) => {
   }
   if (action.type === "DECREASE") {
     const item = state.cart.find((item) => item.id === action.payload);
-    console.log(item);
+
     if (item.quantity > 1) {
       return {
         ...state,

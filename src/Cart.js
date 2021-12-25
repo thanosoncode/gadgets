@@ -10,11 +10,9 @@ const Cart = () => {
     removeItem,
     increaseQuantity,
     decreaseQuantity,
-    checkOut,
     checkOutStripe,
   } = useGlobalContext();
   const [sale, setSale] = useState(false);
-  console.log(state.cart);
   const totalProducts = state.cart.reduce((total, cartItem) => {
     return total + cartItem.quantity;
   }, 0);
